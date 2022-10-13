@@ -12,6 +12,7 @@ import './style.scss';
 import { useNavigate } from 'react-router-dom';
 import { User } from '../../models/User';
 import ModalComment from './modal-cmt';
+import moment from 'moment';
 
 interface Props {
   id: string | undefined;
@@ -104,29 +105,32 @@ export default function CommentPage({ id }: Props) {
         )}
 
         <div className="comment">
-          <div className="item-comment">
-            <Avatar src="https://joeschmoe.io/api/v1/random" alt="Han Solo" />
-            <div className="main-comment">
-              <h6 className="name-user">abc</h6>
-              <p className="content-comment">
-                dffdnds dfjjfj djfdvdjkdnvkdscs dffdnds dfjjfj djfdvdjkdnvkdscs dffdnds dfjjfj djfdvdjkdnvkdscs dffdnds
-                dfjjfj djfdvdjkdnvkdscs dffdnds dfjjfj djfdvdjkdnvkdscs dffdnds dfjjfj djfdvdjkdnvkdscs dffdnds dfjjfj
-                djfdvdjkdnvkdscs dffdnds dfjjfj djfdvdjkdnvkdscs dffdnds dfjjfj djfdvdjkdnvkdscs dffdnds dfjjfj
-                djfdvdjkdnvkdscs dffdnds dfjjfj djfdvdjkdnvkdscs dffdnds dfjjfj djfdvdjkdnvkdscs
-              </p>
-              <div className="box-action">
-                <span className="create-time">8 ago</span>
-                <div className="action-edit">
-                  <span className="create-time" onClick={() => openModal('1', TYPE_MODAL.EDIT)}>
-                    Edit Comment
-                  </span>
-                  <span className="create-time" onClick={() => openModal('1', TYPE_MODAL.DELETE)}>
-                    Delete Comment
-                  </span>
+          {data?.lenght && data?.map((item: any, index: number) =>
+            <div key={index} className="item-comment">
+              <Avatar src={item?.avatar.url} alt="Han Solo" />
+              <div className="main-comment">
+                <h6 className="name-user">{item.title}</h6>
+                <p className="content-comment">
+                  {item.content}
+                </p>
+                <div className="box-action">
+                  <span className="create-time">Create at {moment(item?.created_at).startOf('hour').fromNow()}</span>
+                  {
+                    userInfo.email === item.user.email && (
+                      <div className="action-edit">
+                        <span className="create-time" onClick={() => openModal(item?.id, TYPE_MODAL.EDIT)}>
+                          Edit Comment
+                        </span>
+                        <span className="create-time" onClick={() => openModal(item?.id, TYPE_MODAL.DELETE)}>
+                          Delete Comment
+                        </span>
+                      </div>
+                    )
+                  }
                 </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </Col>
       <ModalComment isModalOpen={isOpen} onCancel={cancelModal} reload={reload} initValue={initValue} type={type} />
