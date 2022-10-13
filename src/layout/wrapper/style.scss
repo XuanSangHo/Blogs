@@ -1,0 +1,12 @@
+.wrapper-page {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px 0px;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 36, 2, 0.7511379551820728) 0%,
+      rgba(10, 134, 34, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    overflow: auto;
+}

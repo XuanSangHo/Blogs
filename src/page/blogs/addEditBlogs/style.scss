@@ -1,0 +1,26 @@
+.add-blog-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  height: 100%;
+  .col-blog {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  .img-blog-edit {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .ck-editor__editable_inline {
+    min-height: 350px;
+  }
+
+  .box-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

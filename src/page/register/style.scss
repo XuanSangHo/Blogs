@@ -1,0 +1,15 @@
+.col-register {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  animation: login 0.5s;
+  transition: 0.7s;
+  @keyframes login {
+    0% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}

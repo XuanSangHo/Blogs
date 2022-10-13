@@ -1,0 +1,109 @@
+.blog-page {
+  .row-search {
+    margin: 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .block-search {
+      display: flex;
+      .btn-search {
+        margin-right: 20px;
+      }
+    }
+    .block-sort {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      .title-sort {
+        margin-right: 10px;
+        color: #fff;
+      }
+      .right-sort {
+        margin-left: 20px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        .btn-sort {
+          margin-left: 8px;
+          border: 1px solid #000;
+          border-radius: 5px;
+          padding: 5px;
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          cursor: pointer;
+          background: #fff;
+        }
+        .active-btn-sort {
+          background: rgba(226, 132, 24, 0.521);
+        }
+      }
+    }
+  }
+
+  .item-blog {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px 5px #8888887a;
+    background: #fff;
+    &:hover {
+      transform: scale(1.02);
+    }
+    .img-blog {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .col-blog-main {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .title-blog {
+        font-size: 30px;
+        margin: 10px 0px;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+      .anticon[tabindex] {
+        height: 3px;
+      }
+    }
+
+    .content-blog {
+      cursor: pointer;
+      .ck-toolbar_grouping {
+        display: none;
+      }
+      .ck-toolbar__items {
+        display: none;
+      }
+      .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
+        border: none;
+        padding: 0px;
+      }
+    }
+    .cmt-count {
+      display: flex;
+      .create-blog {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.ant-popover-inner-content {
+  padding: 0px 0px !important;
+  .box-content {
+    .btn-add {
+      cursor: pointer;
+      padding: 6px 15px;
+    }
+    .btn-add:hover {
+      background: rgba(12, 216, 243, 0.548);
+    }
+  }
+}

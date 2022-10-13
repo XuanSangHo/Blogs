@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.link-a {
+  color: rgb(0, 38, 165);
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.card-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  height: 100%;
+}
+.col-page {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+}

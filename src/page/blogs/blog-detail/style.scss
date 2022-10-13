@@ -1,0 +1,39 @@
+.blog-detail-page {
+  flex-direction: column;
+  margin-top: 10px;
+
+  .img-blog-detail {
+    max-height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  .main-blog-detail {
+    margin-top: 20px;
+    .title-blog-detail {
+      font-size: 40px;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+
+    .ck-toolbar_grouping {
+      display: none;
+    }
+    .ck-toolbar__items {
+      display: none;
+    }
+    .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
+      border: none;
+      padding: 0px;
+    }
+    .cmt-count {
+      display: flex;
+      .create-blog {
+        margin-right: 10px;
+      }
+    }
+  }
+}

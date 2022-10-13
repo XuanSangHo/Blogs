@@ -1,0 +1,49 @@
+.cmt-page {
+  .col-cmt {
+    .box-add {
+      display: flex;
+      align-items: start;
+      .cmt-form {
+        width: 100%;
+        margin-left: 10px;
+      }
+    }
+
+    .login-cmt {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 20px 0px;
+    }
+
+    .comment {
+      .item-comment {
+        display: flex;
+        width: 100%;
+        align-items: start;
+        .main-comment {
+          margin-left: 10px;
+          .name-user {
+            margin-bottom: 0px;
+          }
+          .content-comment {
+            margin-bottom: 3px;
+          }
+          .box-action {
+            display: flex;
+            flex-wrap: wrap;
+
+            .create-time {
+              margin-left: 5px;
+              color: rgba(104, 104, 104, 0.521);
+              font-weight: 500;
+            }
+
+            .action-edit span {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

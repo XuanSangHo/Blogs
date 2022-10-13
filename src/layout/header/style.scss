@@ -1,0 +1,30 @@
+.header-page {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .box-header {
+    display: flex;
+    align-items: center;
+    .username {
+      font-weight: 600;
+      margin: 0px 10px;
+    }
+  }
+
+  .btn-login {
+    margin-right: 10px;
+  }
+}
+
+.content-header {
+  .btn-logout {
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+  .btn-logout:hover {
+    background: rgba(10, 255, 235, 0.726);
+  }
+}
